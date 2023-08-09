@@ -6,7 +6,7 @@ const app = express();
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 //HomePage
 app.get('/',  (req, res) => {
